@@ -5,6 +5,7 @@ package aula3.model;
 //@setter
 public class Usuario {
 	
+	private String nome;
 	private String cpf;
 	private int idade;
 	private double altura;
@@ -14,14 +15,27 @@ public class Usuario {
 		super();
 	}
 	
-	public Usuario(String cpf, int idade, double altura, String genero) {
+	
+	public Usuario(String nome, String cpf, int idade, double altura, String genero) {
 		super();
+		this.nome = nome;
 		this.cpf = cpf;
 		this.idade = idade;
 		this.altura = altura;
 		this.genero = genero;
 	}
+
 	
+	public String getNome() {
+		return nome;
+	}
+
+
+	public void setNome(String nome) {
+		this.nome = nome;
+	}
+
+
 	public String getGenero() {
 		return genero;
 	}
@@ -56,7 +70,8 @@ public class Usuario {
 
 	@Override
 	public String toString() {
-		return "============================" 
+		return "============================"
+				+"\nNOME:   " +  this.nome
 				+"\nCPF:    " +  this.cpf 
 				+"\nIDADE:  " + this.idade 
 				+"\nALTURA: " + this.altura 
